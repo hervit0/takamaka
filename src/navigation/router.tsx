@@ -15,8 +15,8 @@ const Router = () => (
     </Link>
     <Switch>
       <Route exact path={RouteNames.root} component={WelcomePage}/>
-      <Route path={`/${RouteNames.level1}`} component={() => <Level stage={'1'}/>}/>
-      <Route path={`/${RouteNames.level2}`} component={() => <Level stage={'2'}/>}/>
+      <Route path={`/${RouteNames.level1}`} component={() => <Level stage={'level1'}/>}/>
+      <Route path={`/${RouteNames.level2}`} component={() => <Level stage={'level2'}/>}/>
       <Route component={WelcomePage}/>
     </Switch>
   </HashRouter>
@@ -32,6 +32,20 @@ export const Routes = {
   root: RouteNames.root,
   level1: `#${RouteNames.level1}`,
   level2: `#${RouteNames.level2}`,
+};
+
+export const getRoute = (level: string) => {
+  switch (level) {
+    case 'level1': {
+      return RouteNames.level1;
+    }
+    case 'level2': {
+      return RouteNames.level2;
+    }
+    default: {
+      return Routes.root;
+    }
+  }
 };
 
 export default Router;

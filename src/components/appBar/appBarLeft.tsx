@@ -1,19 +1,13 @@
 import { Button } from '@material-ui/core';
-import Badge from '@material-ui/core/Badge';
-import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import InfoIcon from '@material-ui/icons/Info';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import React from 'react';
-import { useAuth } from '../../contexts/auth';
+import { useCookies } from 'react-cookie';
+import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import { Routes } from '../../navigation/router';
-import { isAuthenticated } from '../../services/authentication';
 
 const useStyles = makeStyles((theme) => ({
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   button: {
     margin: theme.spacing(1),
   }
@@ -21,33 +15,27 @@ const useStyles = makeStyles((theme) => ({
 
 const AppBarLeft = () => {
   const classes = useStyles();
-  const { authTokens } = useAuth();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [cookies, _, removeCookie] = useCookies(['level']);
 
-  if (isAuthenticated(authTokens)) {
-    return (
-      <>
-        <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="notification">
-          <Badge badgeContent={Math.floor(Math.random() * 10)} color="secondary">
-            <NotificationsIcon/>
-          </Badge>
-        </IconButton>
-        <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="exit" href={Routes.root}>
-          <ExitToAppIcon/>
-        </IconButton>
-      </>
-    );
-  } else {
+  if (cookies.level) {
     return (
       <Button
         className={classes.button}
         variant="contained"
-        color="primary"
+        color="secondary"
         size="large"
-        startIcon={<LockOpenIcon/>}
+        startIcon={<RotateLeftIcon/>}
+        href={Routes.root}
+        onClick={() => {
+          removeCookie('level');
+        }}
       >
-        Login
+        Reset
       </Button>
     );
+  } else {
+    return (< InfoIcon/>);
   }
 };
 

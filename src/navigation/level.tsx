@@ -9,7 +9,7 @@ type LevelProps = {
 }
 
 const Level = ({ stage }: LevelProps) => {
-  const [cookies, setCookie] = useCookies(['name']);
+  const [cookies, setCookie] = useCookies(['level']);
 
   return (
     <>
@@ -17,14 +17,14 @@ const Level = ({ stage }: LevelProps) => {
         {stage}
       </Typography>
       <Typography variant="h5">
-        {cookies.name}
+        {cookies.level}
       </Typography>
       <Button
         variant="outlined"
         color="secondary"
         size="large"
         startIcon={<FiberNewIcon/>}
-        onClick={() => setCookie('name', stage)}
+        onClick={() => setCookie('level', stage)}
       >
         Sign up
       </Button>
