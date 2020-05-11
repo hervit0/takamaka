@@ -29,7 +29,7 @@ export const RouteNames = {
 };
 
 export const Routes = {
-  root: RouteNames.root,
+  root: `#${RouteNames.root}`,
   level1: `#${RouteNames.level1}`,
   level2: `#${RouteNames.level2}`,
 };
