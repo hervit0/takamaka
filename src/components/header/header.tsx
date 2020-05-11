@@ -75,8 +75,8 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
         {header}
       </Typography>
       {cookies.level ?
-        (<Box>
-          <TextField autoFocus={true} size='small' id="outlined-basic" label="Code" variant='filled' onChange={handleCodeOnChange}/>
+        (<Box display="flex" alignItems='center'>
+          <TextField autoFocus={true} size='small' id="outlined-basic" label="Code" variant='outlined' onChange={handleCodeOnChange}/>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleSubmitCode}>
             <TelegramIcon/>
           </IconButton>

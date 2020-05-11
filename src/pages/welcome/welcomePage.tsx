@@ -37,6 +37,9 @@ const WelcomePage = () => {
             Here are some brain-smashing problems, they are not ordered by difficulty. They are about everything and nothing, they are sometimes obvious, sometimes not.
           </Typography>
           <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
+            You just need to enter a code for each riddle.
+          </Typography>
+          <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
             This site uses cookies to track your progression, if you change browser or laptop, you will have to start again.
           </Typography>
           <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
