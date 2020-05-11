@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/repo
     environment:
       - SOURCE_BRANCH: master
-      - TARGET_BRANCH: takamaka-gh-pages
+      - TARGET_BRANCH: gh-pages
       - GH_EMAIL: herve.ahleung@gmail.com
       - GH_NAME: hervit0
     steps:
