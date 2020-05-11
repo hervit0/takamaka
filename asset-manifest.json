@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/takamaka/static/css/main.05fa3424.chunk.css",
+    "main.js": "/takamaka/static/js/main.10a757cf.chunk.js",
+    "main.js.map": "/takamaka/static/js/main.10a757cf.chunk.js.map",
+    "runtime-main.js": "/takamaka/static/js/runtime-main.619539ba.js",
+    "runtime-main.js.map": "/takamaka/static/js/runtime-main.619539ba.js.map",
+    "static/js/2.05f5a5a3.chunk.js": "/takamaka/static/js/2.05f5a5a3.chunk.js",
+    "static/js/2.05f5a5a3.chunk.js.map": "/takamaka/static/js/2.05f5a5a3.chunk.js.map",
+    "index.html": "/takamaka/index.html",
+    "precache-manifest.653f4343ab7d9116fc52e669f8350fb1.js": "/takamaka/precache-manifest.653f4343ab7d9116fc52e669f8350fb1.js",
+    "service-worker.js": "/takamaka/service-worker.js",
+    "static/css/main.05fa3424.chunk.css.map": "/takamaka/static/css/main.05fa3424.chunk.css.map",
+    "static/js/2.05f5a5a3.chunk.js.LICENSE.txt": "/takamaka/static/js/2.05f5a5a3.chunk.js.LICENSE.txt",
+    "static/media/begin-random.jpg": "/takamaka/static/media/begin-random.77943a6c.jpg",
+    "static/media/begin.jpg": "/takamaka/static/media/begin.7895e492.jpg",
+    "static/media/book.jpg": "/takamaka/static/media/book.e1b7ca6a.jpg",
+    "static/media/logo.svg": "/takamaka/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.619539ba.js",
+    "static/js/2.05f5a5a3.chunk.js",
+    "static/css/main.05fa3424.chunk.css",
+    "static/js/main.10a757cf.chunk.js"
+  ]
+}
