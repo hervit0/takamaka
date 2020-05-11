@@ -44,7 +44,6 @@ const AppBarLeft = () => {
         color="primary"
         size="large"
         startIcon={<LockOpenIcon/>}
-        href={Routes.signin}
       >
         Login
       </Button>

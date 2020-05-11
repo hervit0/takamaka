@@ -1,23 +1,23 @@
+import Link from '@material-ui/core/Link';
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import NewStoryPage from '../pages/newStory/newStoryPage';
+import { v4 as uuidv4 } from 'uuid';
 import NotFoundPage from '../pages/notFound/notFoundPage';
-import SignInPage from '../pages/signIn/signInPage';
-import DemoStoryPage from '../pages/story/demoStoryPage';
-import StoryPage from '../pages/story/storyPage';
-import UserDashboardPage from '../pages/userDashboard/userDashboardPage';
 import WelcomePage from '../pages/welcome/welcomePage';
-import PrivateRoute from './privateRoute';
+import Level from './level';
 
 const Router = () => (
   <HashRouter basename='/'>
+    <Link href={Routes.level1}>
+      Level 1
+    </Link>
+    <Link href={Routes.level2}>
+      Level 2
+    </Link>
     <Switch>
       <Route exact path={RouteNames.root} component={WelcomePage}/>
-      <Route path={`/${RouteNames.signin}`} component={SignInPage}/>
-      <PrivateRoute path={`/${RouteNames.dashboard}`} component={UserDashboardPage}/>
-      <PrivateRoute path={`/${RouteNames.newStory}`} component={NewStoryPage}/>
-      <PrivateRoute path={`/${RouteNames.story}`} component={StoryPage}/>
-      <PrivateRoute path={`/${RouteNames.demoStory}`} component={DemoStoryPage}/>
+      <Route path={`/${RouteNames.level1}`} component={() => <Level stage={'1'}/>}/>
+      <Route path={`/${RouteNames.level2}`} component={() => <Level stage={'2'}/>}/>
       <Route component={NotFoundPage}/>
     </Switch>
   </HashRouter>
@@ -25,20 +25,14 @@ const Router = () => (
 
 export const RouteNames = {
   root: '/',
-  signin: 'signin',
-  dashboard: 'dashboard',
-  newStory: 'newStory',
-  story: 'story',
-  demoStory: 'demoStory',
+  level1: uuidv4(),
+  level2: uuidv4(),
 };
 
 export const Routes = {
-  root: '/',
-  signin: `#${RouteNames.signin}`,
-  dashboard: `#${RouteNames.dashboard}`,
-  newStory: `#${RouteNames.newStory}`,
-  story: `#${RouteNames.story}`,
-  demoStory: `#${RouteNames.demoStory}`,
+  root: RouteNames.root,
+  level1: `#${RouteNames.level1}`,
+  level2: `#${RouteNames.level2}`,
 };
 
 export default Router;

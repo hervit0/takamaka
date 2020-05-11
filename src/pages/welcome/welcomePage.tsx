@@ -27,7 +27,7 @@ const WelcomePage = () => {
         color="secondary"
         size="large"
         startIcon={<LockOpenIcon/>}
-        href={Routes.signin}
+        href={Routes.root}
       >
         Sign in
       </Button>

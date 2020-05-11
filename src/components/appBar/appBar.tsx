@@ -27,7 +27,7 @@ const CustomAppBar = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href={Routes.dashboard}>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href={Routes.root}>
             <DashboardIcon/>
           </IconButton>
           <Typography variant="h4" className={classes.title}>
