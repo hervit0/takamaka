@@ -9,7 +9,6 @@ import { Redirect } from 'react-router-dom';
 import CustomHeader from '../../components/header/header';
 import PageContainer from '../../components/pageContainer/pageContainer';
 import { getRoute, Routes } from '../../navigation/router';
-import { hash } from '../../services/cryptography';
 
 const useStyles = makeStyles((theme) => ({
   button: {

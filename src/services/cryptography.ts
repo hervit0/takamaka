@@ -5,7 +5,7 @@ export const hash = (data: string) => {
   return createHash('md5').update(data).digest('hex');
 };
 
-export const securedHash = (data: string) => {
+export const encryptedHash = (data: string) => {
   encrypt(hash(data));
 };
 
