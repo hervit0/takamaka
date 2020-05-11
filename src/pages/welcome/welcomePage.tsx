@@ -1,24 +1,27 @@
-import { Button } from '@material-ui/core';
+import { Box, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import FiberNewIcon from '@material-ui/icons/FiberNew';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
-import { AES, enc } from 'crypto-ts';
+import Typography from '@material-ui/core/Typography';
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import React from 'react';
 import { useCookies } from 'react-cookie';
 import { Redirect } from 'react-router-dom';
 import CustomHeader from '../../components/header/header';
 import PageContainer from '../../components/pageContainer/pageContainer';
 import { getRoute, Routes } from '../../navigation/router';
+import { encrypt } from '../../services/cryptography';
 
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
+  },
+  typo: {
+    marginLeft: theme.spacing(3),
   }
 }));
 
 const WelcomePage = () => {
   const classes = useStyles();
-  const [cookies] = useCookies(['level']);
+  const [cookies, setCookies] = useCookies(['level']);
 
   if (cookies.level) {
     return (<Redirect to={getRoute(cookies.level)}/>);
@@ -26,24 +29,33 @@ const WelcomePage = () => {
     return (
       <PageContainer>
         <CustomHeader header='Welcome'/>
+        <Box width={1} display="flex" flexDirection='column'>
+          <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
+            Hey! You like solving riddles and puzzles?
+          </Typography>
+          <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
+            Here are some brain-smashing problems, they are not ordered by difficulty. They are about everything and nothing, they are sometimes obvious, sometimes not.
+          </Typography>
+          <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
+            This site uses cookies to track your progression, if you change browser or laptop, you will have to start again.
+          </Typography>
+          <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
+            Good luck and have fun,
+          </Typography>
+          <Typography className={classes.typo} variant="body1" align='right' paragraph={true}>
+            a kid from the 90's.
+          </Typography>
+        </Box>
         <Button
           className={classes.button}
           variant="contained"
           color="secondary"
           size="large"
-          startIcon={<LockOpenIcon/>}
+          startIcon={<PlayCircleOutlineIcon/>}
           href={Routes.root}
+          onClick={() => setCookies('level', encrypt('1'))}
         >
-          {AES.decrypt(AES.encrypt('1', process.env.REACT_APP_SALT as string).toString(), process.env.REACT_APP_SALT as string).toString(enc.Utf8)}
-        </Button>
-        <Button
-          className={classes.button}
-          variant="outlined"
-          color="secondary"
-          size="large"
-          startIcon={<FiberNewIcon/>}
-        >
-          {AES.encrypt('something', process.env.REACT_APP_SALT as string).toString()}
+          Start
         </Button>
       </PageContainer>
     );

@@ -1,4 +1,3 @@
-import Link from '@material-ui/core/Link';
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
@@ -8,12 +7,6 @@ import Level from './level';
 
 const Router = () => (
   <HashRouter basename='/'>
-    <Link href={Routes.level1}>
-      Level 1
-    </Link>
-    <Link href={Routes.level2}>
-      Level 2
-    </Link>
     <Switch>
       <Route exact path={RouteNames.root} component={WelcomePage}/>
       <Route path={`/${RouteNames.level1}`} component={() => <Level stage={'1'}/>}/>

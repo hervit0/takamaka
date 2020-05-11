@@ -40,7 +40,6 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
   };
 
   const handleSubmitCode = () => {
-    //  TODO: should be cross-checked with cookie
     const codeValidation = getCodeValidation(code, cookies.level);
     if (codeValidation.isValid) {
       setIsSuccess(true);
@@ -58,7 +57,7 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
 
   return (
     <div className={classes.header}>
-      <Typography className={classes.typoShare} variant='h3' color="textPrimary">
+      <Typography className={classes.typoShare} variant='h4' color="textPrimary">
         {header}
       </Typography>
       {cookies.level ?
