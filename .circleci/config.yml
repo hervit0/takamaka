@@ -16,16 +16,11 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "56:a0:00:20:b4:82:70:b0:af:ff:cb:47:72:6b:8e:11"
-            - "c2:5f:03:d3:7b:5d:1c:87:52:69:73:31:67:72:a1:d9"
-#           created with read/write access here: https://github.com/hervit0/github-pages/settings/keys
-#            - "1f:8b:08:81:74:91:5e:40:53:4b:23:47:82:82:fa:8c"
-#           https://circleci.com/gh/hervit0/github-pages/edit#ssh
-            - "50:ec:0f:3a:e2:5f:ab:bf:15:34:8f:ec:5d:3b:50:40"
+            - "56:a0:00:20:b4:82:70:b0:af:ff:cb:47:72:6b:8e:11"  # Add SSH key - user key from hervit0
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
       - run:
           name: "Install dependencies"
           command: npm install
@@ -33,12 +28,12 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-#      - run:
-#          name: "Run unit tests"
-#          command: npm test
-#      - run:
-#          name: "Run linter"
-#          command: npm run lint
+      #      - run:
+      #          name: "Run unit tests"
+      #          command: npm test
+      #      - run:
+      #          name: "Run linter"
+      #          command: npm run lint
       - run:
           name: "Deploy"
           command: |
