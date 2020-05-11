@@ -31,7 +31,7 @@ const CustomAppBar = () => {
             <DashboardIcon/>
           </IconButton>
           <Typography variant="h4" className={classes.title}>
-            Story Tok
+            Takamaka
           </Typography>
           <AppBarLeft/>
         </Toolbar>
