@@ -1,4 +1,5 @@
 import { Button } from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
 import RotateLeftIcon from '@material-ui/icons/RotateLeft';
@@ -9,7 +10,7 @@ import { Routes } from '../../navigation/router';
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
-  }
+  },
 }));
 
 const AppBarLeft = () => {
@@ -19,19 +20,20 @@ const AppBarLeft = () => {
 
   if (cookies.level) {
     return (
-      <Button
-        className={classes.button}
-        variant="contained"
-        color="secondary"
-        size="large"
-        startIcon={<RotateLeftIcon/>}
-        href={Routes.root}
-        onClick={() => {
-          removeCookie('level');
-        }}
-      >
-        Reset
-      </Button>
+      <IconButton edge="start" color="inherit" aria-label="menu" href={Routes.root}>
+        <Button
+          className={classes.button}
+          variant="contained"
+          color="secondary"
+          size="small"
+          startIcon={<RotateLeftIcon/>}
+          onClick={() => {
+            removeCookie('level');
+          }}
+        >
+          Reset
+        </Button>
+      </IconButton>
     );
   } else {
     return (< InfoIcon/>);

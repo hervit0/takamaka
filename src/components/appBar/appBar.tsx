@@ -1,9 +1,10 @@
+import { TextField } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
+import Box from '@material-ui/core/Box';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import DashboardIcon from '@material-ui/icons/Dashboard';
+import TelegramIcon from '@material-ui/icons/Telegram';
 import React from 'react';
 import { Routes } from '../../navigation/router';
 import AppBarLeft from './appBarLeft';
@@ -13,10 +14,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginLeft: theme.spacing(2),
   },
-  title: {
-    flexGrow: 1,
+  toolbar: {
+    justifyContent: 'space-between',
   },
 }));
 
@@ -25,14 +26,14 @@ const CustomAppBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href={Routes.root}>
-            <DashboardIcon/>
-          </IconButton>
-          <Typography variant="h4" className={classes.title}>
-            Takamaka
-          </Typography>
+      <AppBar position="static" color='transparent'>
+        <Toolbar className={classes.toolbar}>
+          <Box>
+            <TextField autoFocus={true} size='small' id="outlined-basic" label="Code" variant='filled'/>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href={Routes.root}>
+              <TelegramIcon/>
+            </IconButton>
+          </Box>
           <AppBarLeft/>
         </Toolbar>
       </AppBar>
