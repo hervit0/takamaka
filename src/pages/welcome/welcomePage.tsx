@@ -37,7 +37,7 @@ const WelcomePage = () => {
           {AES.decrypt(AES.encrypt('1', process.env.REACT_APP_SALT as string).toString(), process.env.REACT_APP_SALT as string).toString(enc.Utf8)}
         </Button>
         <p>{AES.encrypt('1', process.env.REACT_APP_SALT as string).toString()}</p>
-        <p>{process.env.APP_SALT}</p>
+        <p>{process.env.REACT_APP_SALT}</p>
         <Button
           className={classes.button}
           variant="outlined"
