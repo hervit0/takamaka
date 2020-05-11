@@ -48,7 +48,7 @@ jobs:
               git rm -rf .
               cd ..
 
-              npm run build
+              REACT_APP_SALT=$APP_SALT npm run build
 
               cp -a build/. out/.
 
