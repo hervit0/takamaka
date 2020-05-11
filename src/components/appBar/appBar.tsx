@@ -1,12 +1,8 @@
-import { TextField } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
-import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import TelegramIcon from '@material-ui/icons/Telegram';
+import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import { Routes } from '../../navigation/router';
 import AppBarLeft from './appBarLeft';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,14 +22,11 @@ const CustomAppBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color='transparent'>
+      <AppBar position="static">
         <Toolbar className={classes.toolbar}>
-          <Box>
-            <TextField autoFocus={true} size='small' id="outlined-basic" label="Code" variant='filled'/>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href={Routes.root}>
-              <TelegramIcon/>
-            </IconButton>
-          </Box>
+          <Typography variant="h5">
+            Takamaka
+          </Typography>
           <AppBarLeft/>
         </Toolbar>
       </AppBar>

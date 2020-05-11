@@ -1,7 +1,7 @@
 import React from 'react';
+import { CookiesProvider } from 'react-cookie';
 import './App.css';
 import CustomAppBar from './components/appBar/appBar';
-import { CookiesProvider } from 'react-cookie';
 import Router from './navigation/router';
 
 function App() {
