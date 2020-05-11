@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "646318477f06fba764017042c2246223",
+    "revision": "15928568beb29e5f80d4453e33558b0e",
     "url": "/takamaka/index.html"
   },
   {
-    "revision": "f2b2cd19720a00eaf8e4",
+    "revision": "e065012d5f9731fdfcb9",
     "url": "/takamaka/static/css/main.05fa3424.chunk.css"
   },
   {
-    "revision": "29790feda5ec3a39d76c",
-    "url": "/takamaka/static/js/2.05f5a5a3.chunk.js"
+    "revision": "ff3ffe937de01ada0fce",
+    "url": "/takamaka/static/js/2.8e7b7f6d.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/takamaka/static/js/2.05f5a5a3.chunk.js.LICENSE.txt"
+    "url": "/takamaka/static/js/2.8e7b7f6d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f2b2cd19720a00eaf8e4",
-    "url": "/takamaka/static/js/main.10a757cf.chunk.js"
+    "revision": "e065012d5f9731fdfcb9",
+    "url": "/takamaka/static/js/main.281e4f27.chunk.js"
   },
   {
-    "revision": "4a8abf376737bede4133",
-    "url": "/takamaka/static/js/runtime-main.619539ba.js"
+    "revision": "05e7212a161f2f1db55d",
+    "url": "/takamaka/static/js/runtime-main.1923fc10.js"
   },
   {
     "revision": "77943a6c8b506737d091f721f6f9169d",
