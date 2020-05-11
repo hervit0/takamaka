@@ -3,7 +3,7 @@ import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import WelcomePage from '../pages/welcome/welcomePage';
-import { decryptLevelCookie } from '../services/cryptography';
+import { decrypt } from '../services/cryptography';
 import Level from './level';
 
 const Router = () => (
@@ -36,7 +36,7 @@ export const Routes = {
 };
 
 export const getRoute = (cryptedLevel: string) => {
-  switch (decryptLevelCookie(cryptedLevel)) {
+  switch (decrypt(cryptedLevel)) {
     case '1': {
       return RouteNames.level1;
     }
