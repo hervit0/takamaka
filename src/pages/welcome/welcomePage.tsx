@@ -9,6 +9,7 @@ import { Redirect } from 'react-router-dom';
 import CustomHeader from '../../components/header/header';
 import PageContainer from '../../components/pageContainer/pageContainer';
 import { getRoute, Routes } from '../../navigation/router';
+import { hash } from '../../services/cryptography';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -36,8 +37,6 @@ const WelcomePage = () => {
         >
           {AES.decrypt(AES.encrypt('1', process.env.REACT_APP_SALT as string).toString(), process.env.REACT_APP_SALT as string).toString(enc.Utf8)}
         </Button>
-        <p>{AES.encrypt('1', process.env.REACT_APP_SALT as string).toString()}</p>
-        <p>{process.env.REACT_APP_SALT}</p>
         <Button
           className={classes.button}
           variant="outlined"

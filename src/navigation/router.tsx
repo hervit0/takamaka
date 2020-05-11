@@ -3,6 +3,7 @@ import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import WelcomePage from '../pages/welcome/welcomePage';
+import { decryptLevelCookie } from '../services/cryptography';
 import Level from './level';
 
 const Router = () => (
@@ -15,8 +16,8 @@ const Router = () => (
     </Link>
     <Switch>
       <Route exact path={RouteNames.root} component={WelcomePage}/>
-      <Route path={`/${RouteNames.level1}`} component={() => <Level stage={'level1'}/>}/>
-      <Route path={`/${RouteNames.level2}`} component={() => <Level stage={'level2'}/>}/>
+      <Route path={`/${RouteNames.level1}`} component={() => <Level stage={'1'}/>}/>
+      <Route path={`/${RouteNames.level2}`} component={() => <Level stage={'2'}/>}/>
       <Route component={WelcomePage}/>
     </Switch>
   </HashRouter>
@@ -34,12 +35,12 @@ export const Routes = {
   level2: `#${RouteNames.level2}`,
 };
 
-export const getRoute = (level: string) => {
-  switch (level) {
-    case 'level1': {
+export const getRoute = (cryptedLevel: string) => {
+  switch (decryptLevelCookie(cryptedLevel)) {
+    case '1': {
       return RouteNames.level1;
     }
-    case 'level2': {
+    case '2': {
       return RouteNames.level2;
     }
     default: {

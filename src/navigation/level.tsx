@@ -5,6 +5,7 @@ import React from 'react';
 import { useCookies } from 'react-cookie';
 import CustomHeader from '../components/header/header';
 import PageContainer from '../components/pageContainer/pageContainer';
+import { encryptLevelCookie } from '../services/cryptography';
 
 type LevelProps = {
   stage: string
@@ -24,7 +25,7 @@ const Level = ({ stage }: LevelProps) => {
         color="secondary"
         size="large"
         startIcon={<FiberNewIcon/>}
-        onClick={() => setCookie('level', stage)}
+        onClick={() => setCookie('level', encryptLevelCookie(stage))}
       >
         Sign up
       </Button>
