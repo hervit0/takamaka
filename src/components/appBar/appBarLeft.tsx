@@ -1,10 +1,9 @@
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
+import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import React from 'react';
 import { useCookies } from 'react-cookie';
-import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import { Routes } from '../../navigation/router';
 
 const useStyles = makeStyles((theme) => ({
