@@ -2,6 +2,7 @@ import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import FiberNewIcon from '@material-ui/icons/FiberNew';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
+import { AES, enc } from 'crypto-ts';
 import React from 'react';
 import { useCookies } from 'react-cookie';
 import { Redirect } from 'react-router-dom';
@@ -33,8 +34,10 @@ const WelcomePage = () => {
           startIcon={<LockOpenIcon/>}
           href={Routes.root}
         >
-          Sign in
+          {AES.decrypt(AES.encrypt('1', process.env.REACT_APP_SALT as string).toString(), process.env.REACT_APP_SALT as string).toString(enc.Utf8)}
         </Button>
+        <p>{AES.encrypt('1', process.env.REACT_APP_SALT as string).toString()}</p>
+        <p>{process.env.APP_SALT}</p>
         <Button
           className={classes.button}
           variant="outlined"
@@ -42,7 +45,7 @@ const WelcomePage = () => {
           size="large"
           startIcon={<FiberNewIcon/>}
         >
-          Sign up
+          {AES.encrypt('something', process.env.REACT_APP_SALT as string).toString()}
         </Button>
       </PageContainer>
     );
