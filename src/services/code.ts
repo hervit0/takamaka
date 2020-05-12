@@ -10,7 +10,7 @@ export const getCodeValidation = (code: string, encryptedLevel: string): CodeVal
 
   const map = new Map()
     .set('1', 'U2FsdGVkX1+ucU+qtvAYSlaLoe7b0HPeSAh1oG1D9DhvXbPr705zrxagtjnncii2oYnf3Ugx1+DiczkpurjCJQ==')
-    .set('2', 'U2FsdGVkX1+TE4kmj+79HTGUs34EEscWkgAOElxg9m710/RDfusxdTK1BgsEft0pDFfCP2IogqkR7oVaHHdeqw==');
+    .set('2', 'U2FsdGVkX19Ll15dSQzauEyVBzN2B1D1RGajErxZY+mAKfCay1RyGnBJ2rqTR7/FqTHJtWNxYAIF7qUXnb4SaQ==');
 
   if (map.has(level)) {
     if (hash(code.toLowerCase()) === decrypt(map.get(level))) {

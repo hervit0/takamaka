@@ -93,6 +93,7 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
               id="outlined-basic"
               label="Code"
               variant='outlined'
+              autoComplete='off'
               onChange={handleCodeOnChange}
               onKeyPress={handleEnterPres}
             />

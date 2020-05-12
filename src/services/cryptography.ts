@@ -9,12 +9,11 @@ export const encryptedHash = (data: string) => {
   encrypt(hash(data));
 };
 
-export const decrypt = (cookieLevel: string) => {
-  return AES.decrypt(cookieLevel, process.env.REACT_APP_SALT as string).toString(enc.Utf8);
+export const decrypt = (data: string) => {
+  return AES.decrypt(data, process.env.REACT_APP_SALT as string).toString(enc.Utf8);
 };
 
-export const encrypt = (cookieLevel: string) => {
-  // Rotation
-  return AES.encrypt(cookieLevel, process.env.REACT_APP_SALT as string).toString();
+export const encrypt = (data: string) => {
+  return AES.encrypt(data, process.env.REACT_APP_SALT as string).toString();
 };
 
