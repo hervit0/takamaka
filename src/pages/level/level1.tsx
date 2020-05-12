@@ -16,30 +16,24 @@ const useStyles = makeStyles((theme) => ({
 const Level1 = () => {
   const classes = useStyles();
 
+  const books = [
+    'The Half-Blood Prince',
+    'The Philosopher\'s Stone',
+    'The Chamber of Secrets',
+    'The Order of the Phoenix',
+    'The Deathly Hallows',
+    'The Prisoner of Azkaban',
+    'The Goblet of Fire',
+  ];
+
   return (
     <Level stage={'From the cupboard under the stairs'}>
       <Grid className={classes.root} container spacing={2} direction="column" justify="center" alignItems="center">
-        <Typography className={classes.typo} variant="body1">
-          The Half-Blood Prince
-        </Typography>
-        <Typography className={classes.typo} variant="body1">
-          The Philosopher's Stone
-        </Typography>
-        <Typography className={classes.typo} variant="body1">
-          The Chamber of Secrets
-        </Typography>
-        <Typography className={classes.typo} variant="body1">
-          The Order of the Phoenix
-        </Typography>
-        <Typography className={classes.typo} variant="body1">
-          The Deathly Hallows
-        </Typography>
-        <Typography className={classes.typo} variant="body1">
-          The Prisoner of Azkaban
-        </Typography>
-        <Typography className={classes.typo} variant="body1">
-          The Goblet of Fire
-        </Typography>
+        {books.map((book) => (
+          <Typography className={classes.typo} variant="body1">
+            {book}
+          </Typography>
+        ))}
       </Grid>
     </Level>
   );
