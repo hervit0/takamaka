@@ -1,9 +1,9 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import Level from '../pages/level/level';
 import WelcomePage from '../pages/welcome/welcomePage';
 import { decrypt } from '../services/cryptography';
-import Level from './level';
 
 const Router = () => (
   <HashRouter basename='/'>

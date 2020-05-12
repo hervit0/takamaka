@@ -34,7 +34,8 @@ const WelcomePage = () => {
             Hey! You like solving riddles and puzzles?
           </Typography>
           <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
-            Here are some brain-smashing problems, they are not ordered by difficulty. They are about everything and nothing, they are sometimes obvious, sometimes not.
+            Here are some brain-smashing problems, they are not ordered by difficulty. They are about everything and nothing, they are sometimes obvious,
+            sometimes not.
           </Typography>
           <Typography className={classes.typo} variant="body1" align='left' paragraph={true}>
             You just need to enter a code for each riddle.
