@@ -76,8 +76,10 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
   return (
     <div className={classes.header}>
       <Grid className={classes.headerGrid} container spacing={2} justify="space-between" alignItems="center">
-        <Typography className={classes.typoShare} variant='h4' color="textPrimary">
-          {header}
+        <Typography className={classes.typoShare} variant='h5' color="textPrimary">
+          <Box fontWeight={600}>
+            {header}
+          </Box>
         </Typography>
         {cookies.level ?
           (<Box display="flex" alignItems='center'>
