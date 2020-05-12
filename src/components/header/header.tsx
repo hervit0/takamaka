@@ -69,8 +69,13 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
     if (reason === 'clickaway') {
       return;
     }
-
     setOpenErrorSnack(false);
+  };
+
+  const handleEnterPres = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      handleSubmitCode();
+    }
   };
 
   return (
@@ -83,7 +88,14 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
         </Typography>
         {cookies.level ?
           (<Box display="flex" alignItems='center'>
-            <TextField size='small' id="outlined-basic" label="Code" variant='outlined' onChange={handleCodeOnChange}/>
+            <TextField
+              size='small'
+              id="outlined-basic"
+              label="Code"
+              variant='outlined'
+              onChange={handleCodeOnChange}
+              onKeyPress={handleEnterPres}
+            />
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleSubmitCode}>
               <TelegramIcon/>
             </IconButton>
@@ -109,7 +121,7 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
       />
       <Backdrop className={classes.backdrop} open={isSuccess}>
         <Box display="flex" flexDirection='column' justifyContent="center">
-          <Typography className={classes.typoShare} variant='h3' color='textSecondary'>
+          <Typography className={classes.typoShare} variant='h3' color='secondary'>
             Well done!
           </Typography>
           <Button
