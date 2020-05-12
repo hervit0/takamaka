@@ -13,7 +13,8 @@ export const getCodeValidation = (code: string, encryptedLevel: string): CodeVal
     .set('2', 'U2FsdGVkX19Ll15dSQzauEyVBzN2B1D1RGajErxZY+mAKfCay1RyGnBJ2rqTR7/FqTHJtWNxYAIF7qUXnb4SaQ==')
     .set('3', 'U2FsdGVkX19FMZaKPf8ZHrO+9nnCoqRgEoKqXSUlNs6eq2jRfLHceWLCV9vaHahCv6W2IUTFClOghlVw8V30eQ==')
     .set('4', 'U2FsdGVkX1+hJp/wOeWMdfIAXi+01Fl3aGbBqnZWmEKEuhjsga/oTWC+dtYlzpnPJ38mFDPof/PyBJaw/pBo0A==')
-    .set('5', 'U2FsdGVkX1+y9xjzrdpYMHXVYsmCsjlR5niFQHWV4Obwj8QdR5mK0f2Y5q0ZRE+3quZgF7uA1BfJXMe0vMgWKA==');
+    .set('5', 'U2FsdGVkX1+y9xjzrdpYMHXVYsmCsjlR5niFQHWV4Obwj8QdR5mK0f2Y5q0ZRE+3quZgF7uA1BfJXMe0vMgWKA==')
+    .set('6', 'U2FsdGVkX19fbbzEXLlqcjsc21x0xLzzdS+goC9cnauBhyzRxLuZazxP46ifPNK4JKWjqooH5A4x+d4pxocMvg==');
 
   if (map.has(level)) {
     if (hash(code.toLowerCase()) === decrypt(map.get(level))) {
