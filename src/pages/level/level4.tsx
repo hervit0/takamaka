@@ -33,7 +33,7 @@ const Level4 = () => {
         </Typography>
 
         <Typography className={classes.typo} variant="body1">
-          <Box fontSize={0.2}>
+          <Box fontSize={1}>
             {decrypt('U2FsdGVkX1+Wf2aRYcSlk+kiB4qD+E1idgTC5gIcE3GM3fa0riTyQzwaixVhcwPtIcclD/WeXnAj3SYKLN13x44m8THIBomhcw9JifR2JBc=')}
           </Box>
         </Typography>
