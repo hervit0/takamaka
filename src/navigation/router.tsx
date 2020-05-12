@@ -9,8 +9,8 @@ const Router = () => (
   <HashRouter basename='/'>
     <Switch>
       <Route exact path={RouteNames.root} component={WelcomePage}/>
-      <Route path={`/${RouteNames.level1}`} component={() => <Level stage={'1'}/>}/>
-      <Route path={`/${RouteNames.level2}`} component={() => <Level stage={'2'}/>}/>
+      <Route path={`/${RouteNames.level1}`} component={() => <Level stage={'The first riddle'}/>}/>
+      <Route path={`/${RouteNames.level2}`} component={() => <Level stage={'The second one'}/>}/>
       <Route component={WelcomePage}/>
     </Switch>
   </HashRouter>

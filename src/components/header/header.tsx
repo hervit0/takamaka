@@ -10,6 +10,7 @@ import React from 'react';
 import { useCookies } from 'react-cookie';
 import { getRoute } from '../../navigation/router';
 import { getCodeValidation } from '../../services/code';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -76,7 +77,7 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
       </Typography>
       {cookies.level ?
         (<Box display="flex" alignItems='center'>
-          <TextField autoFocus={true} size='small' id="outlined-basic" label="Code" variant='outlined' onChange={handleCodeOnChange}/>
+          <TextField size='small' id="outlined-basic" label="Code" variant='outlined' onChange={handleCodeOnChange}/>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleSubmitCode}>
             <TelegramIcon/>
           </IconButton>
