@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/takamaka/static/css/main.05fa3424.chunk.css",
-    "main.js": "/takamaka/static/js/main.d2370500.chunk.js",
-    "main.js.map": "/takamaka/static/js/main.d2370500.chunk.js.map",
+    "main.js": "/takamaka/static/js/main.a76f8660.chunk.js",
+    "main.js.map": "/takamaka/static/js/main.a76f8660.chunk.js.map",
     "runtime-main.js": "/takamaka/static/js/runtime-main.1923fc10.js",
     "runtime-main.js.map": "/takamaka/static/js/runtime-main.1923fc10.js.map",
-    "static/js/2.93b70175.chunk.js": "/takamaka/static/js/2.93b70175.chunk.js",
-    "static/js/2.93b70175.chunk.js.map": "/takamaka/static/js/2.93b70175.chunk.js.map",
+    "static/js/2.7fd2c015.chunk.js": "/takamaka/static/js/2.7fd2c015.chunk.js",
+    "static/js/2.7fd2c015.chunk.js.map": "/takamaka/static/js/2.7fd2c015.chunk.js.map",
     "index.html": "/takamaka/index.html",
-    "precache-manifest.35532d13bcf68d49fc0d048f372a7ae2.js": "/takamaka/precache-manifest.35532d13bcf68d49fc0d048f372a7ae2.js",
+    "precache-manifest.68d05fc9c03122d73313618ed744d5f2.js": "/takamaka/precache-manifest.68d05fc9c03122d73313618ed744d5f2.js",
     "service-worker.js": "/takamaka/service-worker.js",
     "static/css/main.05fa3424.chunk.css.map": "/takamaka/static/css/main.05fa3424.chunk.css.map",
-    "static/js/2.93b70175.chunk.js.LICENSE.txt": "/takamaka/static/js/2.93b70175.chunk.js.LICENSE.txt"
+    "static/js/2.7fd2c015.chunk.js.LICENSE.txt": "/takamaka/static/js/2.7fd2c015.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1923fc10.js",
-    "static/js/2.93b70175.chunk.js",
+    "static/js/2.7fd2c015.chunk.js",
     "static/css/main.05fa3424.chunk.css",
-    "static/js/main.d2370500.chunk.js"
+    "static/js/main.a76f8660.chunk.js"
   ]
 }
