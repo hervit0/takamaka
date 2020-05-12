@@ -27,7 +27,7 @@ const Level1 = () => {
   ];
 
   return (
-    <Level stage={'From the cupboard under the stairs'}>
+    <Level name={'From the cupboard under the stairs'}>
       <Grid className={classes.root} container spacing={2} direction="column" justify="center" alignItems="center">
         {books.map((book) => (
           <Typography className={classes.typo} variant="body1">

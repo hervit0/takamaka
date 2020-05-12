@@ -22,7 +22,7 @@ const Level2 = () => {
   const classes = useStyles();
 
   return (
-    <Level stage={'The dark side of the moon'}>
+    <Level name={'The dark side of the moon'}>
       <Grid className={classes.root} container spacing={2} direction="column" justify="center" alignItems="center">
         <Typography className={classes.typo} variant="body1">
           Which creature has one voice and yet becomes four-footed and two-footed and three-footed?

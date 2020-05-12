@@ -4,14 +4,14 @@ import CustomHeader from '../../components/header/header';
 import PageContainer from '../../components/pageContainer/pageContainer';
 
 type LevelProps = {
-  stage: string
+  name: string
   children?: ReactNode
 }
 
-const Level = ({ stage, children }: LevelProps) => {
+const Level = ({ name, children }: LevelProps) => {
   return (
     <PageContainer>
-      <CustomHeader header={stage}/>
+      <CustomHeader header={name}/>
       <Container>
         {children}
       </Container>

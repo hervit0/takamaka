@@ -17,7 +17,7 @@ const Level3 = () => {
   const classes = useStyles();
 
   return (
-    <Level stage={'Et tu, Brute?'}>
+    <Level name={'Et tu, Brute?'}>
       <Grid className={classes.root} container spacing={2} direction="column" justify="center" alignItems="center">
         <Typography className={classes.typo} variant="body1">
           JURA QVQ GUR ZNA JNYX BA GUR ZBBA?
