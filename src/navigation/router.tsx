@@ -1,11 +1,12 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import FinalPage from '../pages/final/final';
+import FinalPage from '../pages/final/finalPage';
 import Level1 from '../pages/level/level1';
 import Level2 from '../pages/level/level2';
 import Level3 from '../pages/level/level3';
 import Level4 from '../pages/level/level4';
+import Level5 from '../pages/level/level5';
 import WelcomePage from '../pages/welcome/welcomePage';
 import { decrypt } from '../services/cryptography';
 
@@ -17,6 +18,7 @@ const Router = () => (
       <Route path={`/${RouteNames.level2}`} component={Level2}/>
       <Route path={`/${RouteNames.level3}`} component={Level3}/>
       <Route path={`/${RouteNames.level4}`} component={Level4}/>
+      <Route path={`/${RouteNames.level5}`} component={Level5}/>
       <Route path={`/${RouteNames.final}`} component={FinalPage}/>
       <Route component={WelcomePage}/>
     </Switch>
@@ -30,6 +32,7 @@ export const RouteNames = {
   level2: uuidv4(),
   level3: uuidv4(),
   level4: uuidv4(),
+  level5: uuidv4(),
 };
 
 export const Routes = {
@@ -39,6 +42,7 @@ export const Routes = {
   level2: `#${RouteNames.level2}`,
   level3: `#${RouteNames.level3}`,
   level4: `#${RouteNames.level4}`,
+  level5: `#${RouteNames.level5}`,
 };
 
 export const getRoute = (cryptedLevel: string) => {
@@ -54,6 +58,9 @@ export const getRoute = (cryptedLevel: string) => {
     }
     case '4': {
       return RouteNames.level4;
+    }
+    case '5': {
+      return RouteNames.level5;
     }
     default: {
       return RouteNames.final;
