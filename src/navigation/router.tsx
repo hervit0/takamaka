@@ -1,8 +1,8 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import Level from '../pages/level/level';
 import Level1 from '../pages/level/level1';
+import Level2 from '../pages/level/level2';
 import WelcomePage from '../pages/welcome/welcomePage';
 import { decrypt } from '../services/cryptography';
 
@@ -11,7 +11,7 @@ const Router = () => (
     <Switch>
       <Route exact path={RouteNames.root} component={WelcomePage}/>
       <Route path={`/${RouteNames.level1}`} component={Level1}/>
-      <Route path={`/${RouteNames.level2}`} component={() => <Level stage={'The second one'}/>}/>
+      <Route path={`/${RouteNames.level2}`} component={Level2}/>
       <Route component={WelcomePage}/>
     </Switch>
   </HashRouter>
