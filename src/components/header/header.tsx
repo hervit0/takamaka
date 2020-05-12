@@ -1,5 +1,6 @@
 import { Box, Button, IconButton, TextField } from '@material-ui/core';
 import Backdrop from '@material-ui/core/Backdrop';
+import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -10,7 +11,6 @@ import React from 'react';
 import { useCookies } from 'react-cookie';
 import { getRoute } from '../../navigation/router';
 import { getCodeValidation } from '../../services/code';
-import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     zIndex: theme.zIndex.drawer + 1,
     color: '#fff',
   },
+  headerGrid: {
+    margin: theme.spacing(2)
+  }
 }));
 
 type CustomHeaderProps = {
@@ -72,17 +75,19 @@ const CustomHeader = ({ header }: CustomHeaderProps) => {
 
   return (
     <div className={classes.header}>
-      <Typography className={classes.typoShare} variant='h4' color="textPrimary">
-        {header}
-      </Typography>
-      {cookies.level ?
-        (<Box display="flex" alignItems='center'>
-          <TextField size='small' id="outlined-basic" label="Code" variant='outlined' onChange={handleCodeOnChange}/>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleSubmitCode}>
-            <TelegramIcon/>
-          </IconButton>
-        </Box>) : null
-      }
+      <Grid className={classes.headerGrid} container spacing={2} justify="space-between" alignItems="center">
+        <Typography className={classes.typoShare} variant='h4' color="textPrimary">
+          {header}
+        </Typography>
+        {cookies.level ?
+          (<Box display="flex" alignItems='center'>
+            <TextField size='small' id="outlined-basic" label="Code" variant='outlined' onChange={handleCodeOnChange}/>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={handleSubmitCode}>
+              <TelegramIcon/>
+            </IconButton>
+          </Box>) : null
+        }
+      </Grid>
       <Snackbar
         anchorOrigin={{
           vertical: 'bottom',
