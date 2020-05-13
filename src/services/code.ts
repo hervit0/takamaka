@@ -14,7 +14,8 @@ export const getCodeValidation = (code: string, encryptedLevel: string): CodeVal
     .set('3', 'U2FsdGVkX19FMZaKPf8ZHrO+9nnCoqRgEoKqXSUlNs6eq2jRfLHceWLCV9vaHahCv6W2IUTFClOghlVw8V30eQ==')
     .set('4', 'U2FsdGVkX1+hJp/wOeWMdfIAXi+01Fl3aGbBqnZWmEKEuhjsga/oTWC+dtYlzpnPJ38mFDPof/PyBJaw/pBo0A==')
     .set('5', 'U2FsdGVkX1+y9xjzrdpYMHXVYsmCsjlR5niFQHWV4Obwj8QdR5mK0f2Y5q0ZRE+3quZgF7uA1BfJXMe0vMgWKA==')
-    .set('6', 'U2FsdGVkX19fbbzEXLlqcjsc21x0xLzzdS+goC9cnauBhyzRxLuZazxP46ifPNK4JKWjqooH5A4x+d4pxocMvg==');
+    .set('6', 'U2FsdGVkX19fbbzEXLlqcjsc21x0xLzzdS+goC9cnauBhyzRxLuZazxP46ifPNK4JKWjqooH5A4x+d4pxocMvg==')
+    .set('7', 'U2FsdGVkX19u4NXlzenkAcUq53IEl+i9B5M9PPpvdxDhxNJfrnPInYhd1lVTcbOvg90JcmeK8Crow0ZA3SrdaQ==');
 
   if (map.has(level)) {
     if (hash(code.toLowerCase()) === decrypt(map.get(level))) {

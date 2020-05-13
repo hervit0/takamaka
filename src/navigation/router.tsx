@@ -8,6 +8,7 @@ import Level3 from '../pages/level/level3';
 import Level4 from '../pages/level/level4';
 import Level5 from '../pages/level/level5';
 import Level6 from '../pages/level/level6';
+import Level7 from '../pages/level/level7';
 import WelcomePage from '../pages/welcome/welcomePage';
 import { decrypt } from '../services/cryptography';
 
@@ -21,6 +22,7 @@ const Router = () => (
       <Route path={`/${RouteNames.level4}`} component={Level4}/>
       <Route path={`/${RouteNames.level5}`} component={Level5}/>
       <Route path={`/${RouteNames.level6}`} component={Level6}/>
+      <Route path={`/${RouteNames.level7}`} component={Level7}/>
       <Route path={`/${RouteNames.final}`} component={FinalPage}/>
       <Route component={WelcomePage}/>
     </Switch>
@@ -36,6 +38,7 @@ export const RouteNames = {
   level4: uuidv4(),
   level5: uuidv4(),
   level6: uuidv4(),
+  level7: uuidv4(),
 };
 
 export const Routes = {
@@ -47,6 +50,7 @@ export const Routes = {
   level4: `#${RouteNames.level4}`,
   level5: `#${RouteNames.level5}`,
   level6: `#${RouteNames.level6}`,
+  level7: `#${RouteNames.level7}`,
 };
 
 export const getRoute = (cryptedLevel: string) => {
@@ -68,6 +72,9 @@ export const getRoute = (cryptedLevel: string) => {
     }
     case '6': {
       return RouteNames.level6;
+    }
+    case '7': {
+      return RouteNames.level7;
     }
     default: {
       return RouteNames.final;
