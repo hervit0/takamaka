@@ -4,9 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import gql from 'graphql-tag';
 import React from 'react';
+import BouncingDots from '../../components/bouncingDots/bouncingDots';
 import { Message } from '../../index';
-import youAvatar from '../../resources/enigma.jpg';
-import meAvatar from '../../resources/marie_curie.jpeg';
+import youAvatar from '../../resources/golum.jpeg';
+import meAvatar from '../../resources/me.jpg';
 import Level from './level';
 
 const useStyles = makeStyles((theme) => ({
@@ -45,6 +46,7 @@ const TOGGLE_TODO = gql`
 const getAvatar = (author: string) => (author === 'me' ? meAvatar : youAvatar);
 const getFlexDirection = (author: string) => (author === 'me' ? 'row' : 'row-reverse');
 const getBorderColor = (author: string) => (author === 'me' ? 'primary.main' : 'secondary.main');
+const getTextColor = (author: string) => (author === 'me' ? 'primary.contrastText' : 'secondary.contrastText');
 
 const Level8 = () => {
   const classes = useStyles();
@@ -52,8 +54,12 @@ const Level8 = () => {
   const { data } = useQuery(GET_VISIBILITY_FILTER);
   const [toggleTodo] = useMutation(TOGGLE_TODO);
   const [code, setCode] = React.useState('');
+  const [showBouncing, setShowBouncing] = React.useState(false);
 
   const doScript = () => {
+    if (code === '') {
+      return;
+    }
     toggleTodo({
       variables: {
         author: 'you',
@@ -61,14 +67,16 @@ const Level8 = () => {
       }
     });
     setCode('');
+    setShowBouncing(true);
     setTimeout(() => {
+      setShowBouncing(false);
       toggleTodo({
         variables: {
           author: 'me',
           content: 'well'
         }
       });
-    }, 1000);
+    }, 2000);
   };
 
   const handleCodeOnChange = (e: React.BaseSyntheticEvent) => {
@@ -87,13 +95,21 @@ const Level8 = () => {
         {data.messages.map(({ author, content }: Message) => (
           <Box display="flex" alignItems='center' flexDirection={getFlexDirection(author)} width='inherit'>
             <Avatar alt="Me" src={getAvatar(author)}/>
-            <Box borderRadius={16} borderColor={getBorderColor(author)} border={1} margin={1}>
+            <Box borderRadius={16} bgcolor={getBorderColor(author)} color={getTextColor(author)} margin={1}>
               <Typography className={classes.typo} variant="body1" align={'left'}>
                 {content}
               </Typography>
             </Box>
           </Box>
         ))}
+
+        {showBouncing
+          ? (
+            <Box display="flex" alignItems='center' width='inherit'>
+              <BouncingDots/>
+            </Box>)
+          : null
+        }
 
         <Box display="flex" alignItems='center'>
           <TextField
@@ -112,6 +128,7 @@ const Level8 = () => {
               edge="start"
               color="inherit"
               aria-label="menu"
+              disabled={code === ''}
               onClick={doScript}
             >
               <TelegramIcon/>
