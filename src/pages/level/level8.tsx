@@ -95,7 +95,14 @@ const Level8 = () => {
         {data.messages.map(({ author, content }: Message) => (
           <Box display="flex" alignItems='center' flexDirection={getFlexDirection(author)} width='inherit'>
             <Avatar alt="Me" src={getAvatar(author)}/>
-            <Box borderRadius={16} bgcolor={getBorderColor(author)} color={getTextColor(author)} margin={1}>
+            <Box
+              borderRadius={16}
+              bgcolor={getBorderColor(author)}
+              color={getTextColor(author)}
+              marginBottom={1}
+              marginRight={1}
+              marginLeft={1}
+            >
               <Typography className={classes.typo} variant="body1" align={'left'}>
                 {content}
               </Typography>
