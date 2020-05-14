@@ -1,5 +1,5 @@
 import { useMutation, useQuery } from '@apollo/react-hooks';
-import { Avatar, Box, Grid, IconButton, TextField, Typography } from '@material-ui/core';
+import { Avatar, Box, Container, IconButton, TextField, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import gql from 'graphql-tag';
@@ -11,10 +11,6 @@ import meAvatar from '../../resources/me.jpg';
 import Level from './level';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    marginTop: theme.spacing(1),
-  },
   typo: {
     margin: theme.spacing(1)
   },
@@ -91,7 +87,7 @@ const Level8 = () => {
 
   return (
     <Level name={'HAL'}>
-      <Grid className={classes.root} container spacing={2} direction="column" justify="center" alignItems="center">
+      <Container maxWidth='sm'>
         {data.messages.map(({ author, content }: Message) => (
           <Box display="flex" alignItems='center' flexDirection={getFlexDirection(author)} width='inherit'>
             <Avatar alt="Me" src={getAvatar(author)}/>
@@ -118,7 +114,7 @@ const Level8 = () => {
           : null
         }
 
-        <Box display="flex" alignItems='center'>
+        <Box display="flex" alignItems='center' flexDirection='row' width='inherit' justifyContent='center'>
           <TextField
             size='small'
             id="outlined-basic"
@@ -142,7 +138,7 @@ const Level8 = () => {
             </IconButton>
           </Box>
         </Box>
-      </Grid>
+      </Container>
     </Level>
   );
 };
