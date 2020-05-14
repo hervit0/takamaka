@@ -60,7 +60,11 @@ const client = new ApolloClient({
 });
 
 const data = {
-  messages: [{ author: 'f', content: 'fse', __typename: 'Message' }],
+  messages: [{
+    author: 'me',
+    content: 'If the Chip is deletable or clickable then it is a button in tab ',
+    __typename: 'Message'
+  }],
 };
 
 cache.writeData({ data });
