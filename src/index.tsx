@@ -62,7 +62,7 @@ const client = new ApolloClient({
 const data = {
   messages: [{
     author: 'me',
-    content: 'If the Chip is deletable or clickable then it is a button in tab ',
+    content: 'Hey, I\'m Hervito. I\'m just a souvenir.',
     __typename: 'Message'
   }],
 };
