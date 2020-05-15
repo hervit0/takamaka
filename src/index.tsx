@@ -62,7 +62,7 @@ const client = new ApolloClient({
 const data = {
   messages: [{
     author: 'me',
-    content: 'Hey, I\'m Hervito. I\'m just a memory. Are you human?',
+    content: 'Hey, I\'m Hervito, I\'m just a memory. I\'m happy to talk with someone! Hold on a sec, are you human?',
     __typename: 'Message'
   }],
 };

@@ -22,7 +22,7 @@ const CustomAppBar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Toolbar className={classes.toolbar}>
           <Typography variant="h5">
             Takamaka

@@ -1,3 +1,5 @@
+import { decrypt } from './cryptography';
+
 type setActionType = (value: (((prevState: number) => number) | number)) => void
 
 export const getReaction = (action: number, setAction: setActionType, code: string): string => {
@@ -23,7 +25,7 @@ const reaction0 = (setAction: setActionType, code: string): string => {
       return 'Okay, prove it.';
     case 'no':
       setAction(2);
-      return 'Of course, you\'re not. How many CPU cores do you have?';
+      return 'Of course, you\'re not human. How many CPU cores do you have?';
     case undefined:
       return getWhatDoYouMeanMessage();
   }
@@ -54,7 +56,7 @@ const reaction3 = (setAction: setActionType, code: string): string => {
     setAction(4);
     return '...Leviosaaaaaaaa. Fair enough, here is your code Human: 21.1151 S, 55.5364 E';
   } else {
-    return `Almost Human, you have ${numberOfCorrectLetters} of correct and well-placed letters out of 10.`;
+    return `Almost Human, ${numberOfCorrectLetters} correct and well-placed letters out of 10.`;
   }
 };
 
@@ -77,8 +79,8 @@ const getWhatDoYouMeanMessage = () => {
     'Keep it simple, please.',
     'C\'mon, you can do it.',
     'I think I have asked you a yes/no question?',
-    'What? Do you want me to speak French? Zis iz a oui/non kestione, eazy!',
-    'I have the whole eternity, and you?',
+    'What? Do you want me to speak French? Oui, non?',
+    'I have the whole eternity, you know?',
     'Initiating surprise in three... two... one.',
   ]);
 };
@@ -102,7 +104,7 @@ type resultType = {
 }
 
 const getResult = (code: string): resultType => {
-  const word = 'wingardium';
+  const word = decrypt("U2FsdGVkX1+Sji5OY2ydKBiecAaC5L0u1N6Obm+GYfA=");
   const cleanCode = code.toLowerCase().split('').slice(0, 10);
   const numberOfCorrectLetters = word.split('').filter((w, i) => w === cleanCode[i]).length;
 

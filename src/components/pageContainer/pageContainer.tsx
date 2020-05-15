@@ -1,4 +1,4 @@
-import { Box, Button } from '@material-ui/core';
+import { Box, Button, Typography } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -58,7 +58,12 @@ const PageContainer = ({ children }: PageContainerProps) => {
         <DialogTitle>{'Thanks for playing!'}</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            If you're stuck or if you want to share any feedback, please contact me: TODO.
+            If you are stuck or if you want to share any feedback, please contact me:
+          </DialogContentText>
+          <DialogContentText>
+            <Typography variant='button'>
+              hervito.dela.vega@gmail.com
+            </Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
