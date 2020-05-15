@@ -1,6 +1,8 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import ChatBot from '../components/chatBot/chatBot';
+import ChatBotPage from '../pages/chatBot/chatBot';
 import FinalPage from '../pages/final/finalPage';
 import Level1 from '../pages/level/level1';
 import Level2 from '../pages/level/level2';
@@ -26,6 +28,7 @@ const Router = () => (
       <Route path={`/${RouteNames.level7}`} component={Level7}/>
       <Route path={`/${RouteNames.level8}`} component={Level8}/>
       <Route path={`/${RouteNames.final}`} component={FinalPage}/>
+      <Route path={`/${RouteNames.bot}`} component={ChatBotPage}/>
       <Route component={WelcomePage}/>
     </Switch>
   </HashRouter>
@@ -34,6 +37,7 @@ const Router = () => (
 export const RouteNames = {
   root: '/',
   final: 'final',
+  bot: 'bot',
   level1: uuidv4(),
   level2: uuidv4(),
   level3: uuidv4(),
@@ -47,6 +51,7 @@ export const RouteNames = {
 export const Routes = {
   root: `#${RouteNames.root}`,
   final: `#${RouteNames.final}`,
+  bot: `#${RouteNames.bot}`,
   level1: `#${RouteNames.level1}`,
   level2: `#${RouteNames.level2}`,
   level3: `#${RouteNames.level3}`,
