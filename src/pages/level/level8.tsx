@@ -1,6 +1,6 @@
 import React from 'react';
 import ChatBot from '../../components/chatBot/chatBot';
-import Level from './level';
+import Level from '../../components/level/level';
 
 const Level8 = () => {
 

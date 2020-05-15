@@ -1,7 +1,7 @@
 import { Container } from '@material-ui/core';
 import React, { ReactNode } from 'react';
-import CustomHeader from '../../components/header/header';
-import PageContainer from '../../components/pageContainer/pageContainer';
+import CustomHeader from '../header/header';
+import PageContainer from '../pageContainer/pageContainer';
 
 type LevelProps = {
   name: string

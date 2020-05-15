@@ -3,7 +3,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import enigma from '../../resources/enigma.jpg';
-import Level from './level';
+import Level from '../../components/level/level';
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 import marieCurie from '../../resources/marie_curie.jpeg';
 import { decrypt } from '../../services/cryptography';
-import Level from './level';
+import Level from '../../components/level/level';
 
 const useStyles = makeStyles((theme) => ({
   root: {
