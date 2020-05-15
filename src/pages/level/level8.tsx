@@ -8,6 +8,8 @@ import BouncingDots from '../../components/bouncingDots/bouncingDots';
 import { Message } from '../../index';
 import youAvatar from '../../resources/golum.jpeg';
 import meAvatar from '../../resources/me.jpg';
+import { getReaction } from '../../services/chat';
+import { encrypt, hash } from '../../services/cryptography';
 import Level from './level';
 
 const useStyles = makeStyles((theme) => ({
@@ -41,7 +43,7 @@ const TOGGLE_TODO = gql`
 
 const getAvatar = (author: string) => (author === 'me' ? meAvatar : youAvatar);
 const getFlexDirection = (author: string) => (author === 'me' ? 'row' : 'row-reverse');
-const getBorderColor = (author: string) => (author === 'me' ? 'primary.main' : 'secondary.main');
+const getBorderColor = (author: string) => (author === 'me' ? 'info.main' : 'success.main');
 const getTextColor = (author: string) => (author === 'me' ? 'primary.contrastText' : 'secondary.contrastText');
 
 const Level8 = () => {
@@ -51,16 +53,14 @@ const Level8 = () => {
   const [toggleTodo] = useMutation(TOGGLE_TODO);
   const [code, setCode] = React.useState('');
   const [showBouncing, setShowBouncing] = React.useState(false);
+  const [action, setAction] = React.useState(0);
 
   const doScript = () => {
     if (code === '') {
       return;
     }
     toggleTodo({
-      variables: {
-        author: 'you',
-        content: code
-      }
+      variables: { author: 'you', content: code }
     });
     setCode('');
     setShowBouncing(true);
@@ -68,8 +68,7 @@ const Level8 = () => {
       setShowBouncing(false);
       toggleTodo({
         variables: {
-          author: 'me',
-          content: 'well'
+          author: 'me', content: getReaction(action, setAction, code)
         }
       });
     }, 2000);
@@ -89,7 +88,7 @@ const Level8 = () => {
     <Level name={'HAL'}>
       <Container maxWidth='sm'>
         {data.messages.map(({ author, content }: Message) => (
-          <Box display="flex" alignItems='center' flexDirection={getFlexDirection(author)} width='inherit'>
+          <Box display="flex" flexDirection={getFlexDirection(author)} width='inherit'>
             <Avatar alt="Me" src={getAvatar(author)}/>
             <Box
               borderRadius={16}
