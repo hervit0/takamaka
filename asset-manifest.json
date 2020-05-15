@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/takamaka/static/css/main.d3fbe488.chunk.css",
-    "main.js": "/takamaka/static/js/main.d83ae5d4.chunk.js",
-    "main.js.map": "/takamaka/static/js/main.d83ae5d4.chunk.js.map",
+    "main.js": "/takamaka/static/js/main.6c56f57b.chunk.js",
+    "main.js.map": "/takamaka/static/js/main.6c56f57b.chunk.js.map",
     "runtime-main.js": "/takamaka/static/js/runtime-main.1923fc10.js",
     "runtime-main.js.map": "/takamaka/static/js/runtime-main.1923fc10.js.map",
-    "static/js/2.b37cf827.chunk.js": "/takamaka/static/js/2.b37cf827.chunk.js",
-    "static/js/2.b37cf827.chunk.js.map": "/takamaka/static/js/2.b37cf827.chunk.js.map",
+    "static/js/2.e9a46834.chunk.js": "/takamaka/static/js/2.e9a46834.chunk.js",
+    "static/js/2.e9a46834.chunk.js.map": "/takamaka/static/js/2.e9a46834.chunk.js.map",
     "index.html": "/takamaka/index.html",
-    "precache-manifest.91fe130661b2c398c95ec2fe99132be4.js": "/takamaka/precache-manifest.91fe130661b2c398c95ec2fe99132be4.js",
+    "precache-manifest.398cd073183102ce74617e3cae28abce.js": "/takamaka/precache-manifest.398cd073183102ce74617e3cae28abce.js",
     "service-worker.js": "/takamaka/service-worker.js",
     "static/css/main.d3fbe488.chunk.css.map": "/takamaka/static/css/main.d3fbe488.chunk.css.map",
-    "static/js/2.b37cf827.chunk.js.LICENSE.txt": "/takamaka/static/js/2.b37cf827.chunk.js.LICENSE.txt",
+    "static/js/2.e9a46834.chunk.js.LICENSE.txt": "/takamaka/static/js/2.e9a46834.chunk.js.LICENSE.txt",
     "static/media/enigma.jpg": "/takamaka/static/media/enigma.5f44acaa.jpg",
     "static/media/me.jpg": "/takamaka/static/media/me.7dbc0795.jpg",
     "static/media/rotherhithe.png": "/takamaka/static/media/rotherhithe.a2a0a0a2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1923fc10.js",
-    "static/js/2.b37cf827.chunk.js",
+    "static/js/2.e9a46834.chunk.js",
     "static/css/main.d3fbe488.chunk.css",
-    "static/js/main.d83ae5d4.chunk.js"
+    "static/js/main.6c56f57b.chunk.js"
   ]
 }
