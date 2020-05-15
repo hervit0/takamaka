@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "250657d320b3b2436fb1ce635c8eca0f",
+    "revision": "9f919204ec6cef50a0ef281fb18f2ca0",
     "url": "/takamaka/index.html"
   },
   {
-    "revision": "0d1a8e8f9d20ec5a161b",
+    "revision": "78addfb313d7c1b98f62",
     "url": "/takamaka/static/css/main.d3fbe488.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/takamaka/static/js/2.b6b773cd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0d1a8e8f9d20ec5a161b",
-    "url": "/takamaka/static/js/main.3e0b8138.chunk.js"
+    "revision": "78addfb313d7c1b98f62",
+    "url": "/takamaka/static/js/main.ccbe395e.chunk.js"
   },
   {
     "revision": "05e7212a161f2f1db55d",
