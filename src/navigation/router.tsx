@@ -11,6 +11,7 @@ import Level5 from '../pages/level/level5';
 import Level6 from '../pages/level/level6';
 import Level7 from '../pages/level/level7';
 import Level8 from '../pages/level/level8';
+import Level9 from '../pages/level/level9';
 import WelcomePage from '../pages/welcome/welcomePage';
 import { decrypt } from '../services/cryptography';
 
@@ -26,6 +27,7 @@ const Router = () => (
       <Route path={`/${RouteNames.level6}`} component={Level6}/>
       <Route path={`/${RouteNames.level7}`} component={Level7}/>
       <Route path={`/${RouteNames.level8}`} component={Level8}/>
+      <Route path={`/${RouteNames.level9}`} component={Level9}/>
       <Route path={`/${RouteNames.final}`} component={FinalPage}/>
       <Route path={`/${RouteNames.bot}`} component={ChatBotPage}/>
       <Route component={WelcomePage}/>
@@ -45,6 +47,7 @@ export const RouteNames = {
   level6: uuidv4(),
   level7: uuidv4(),
   level8: uuidv4(),
+  level9: uuidv4(),
 };
 
 export const Routes = {
@@ -59,6 +62,7 @@ export const Routes = {
   level6: `#${RouteNames.level6}`,
   level7: `#${RouteNames.level7}`,
   level8: `#${RouteNames.level8}`,
+  level9: `#${RouteNames.level9}`,
 };
 
 export const getRoute = (cryptedLevel: string) => {
@@ -86,6 +90,9 @@ export const getRoute = (cryptedLevel: string) => {
     }
     case '8': {
       return RouteNames.level8;
+    }
+    case '9': {
+      return RouteNames.level9;
     }
     default: {
       return RouteNames.final;
