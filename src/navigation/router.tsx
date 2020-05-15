@@ -1,7 +1,6 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import ChatBot from '../components/chatBot/chatBot';
 import ChatBotPage from '../pages/chatBot/chatBot';
 import FinalPage from '../pages/final/finalPage';
 import Level1 from '../pages/level/level1';
