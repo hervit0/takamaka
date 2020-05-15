@@ -1,7 +1,6 @@
 import { Button } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-import InfoIcon from '@material-ui/icons/Info';
 import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import React from 'react';
 import { useCookies } from 'react-cookie';
@@ -36,7 +35,7 @@ const AppBarLeft = () => {
       </IconButton>
     );
   } else {
-    return (< InfoIcon/>);
+    return null;
   }
 };
 
