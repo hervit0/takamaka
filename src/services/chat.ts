@@ -40,9 +40,11 @@ const reaction2 = (setAction: setActionType, code: string): string => {
     return 'Well, I\'m not really impressed. Are you sure?';
   } else if (stain42 > 42) {
     return 'Wow! That\'s a lot. I don\'t believe you.';
-  } else {
-    setAction(3);
+  } else if (stain42 === 42) {
+    setAction(99);
     return 'Incredible! I think you will have enough computing power to solve it: 21.1151 S, 55.5364 E';
+  } else {
+    return 'Me expecting number. You machine? You sure?'
   }
 };
 
@@ -52,7 +54,7 @@ const reaction3 = (setAction: setActionType, code: string): string => {
     setAction(4);
     return '...Leviosaaaaaaaa. Fair enough, here is your code Human: 21.1151 S, 55.5364 E';
   } else {
-    return `Almost Human, you have ${numberOfCorrectLetters} of correct letters out of 10.`;
+    return `Almost Human, you have ${numberOfCorrectLetters} of correct and well-placed letters out of 10.`;
   }
 };
 
@@ -72,7 +74,12 @@ const getWhatDoYouMeanMessage = () => {
   return getRandomMessageFrom([
     'Wut?',
     'Hm no, I don\'t understand what you say.',
-    'Keep it simple please.',
+    'Keep it simple, please.',
+    'C\'mon, you can do it.',
+    'I think I have asked you a yes/no question?',
+    'What? Do you want me to speak French? Zis iz a oui/non kestione, eazy!',
+    'I have the whole eternity, and you?',
+    'Initiating surprise in three... two... one.',
   ]);
 };
 
@@ -81,8 +88,9 @@ const getFinalMessage = () => {
     'Huh? You\'re still here?',
     'Wait I forgot to tell you something. Haha, #joke.',
     'You should meet my real me!',
-    'Do you know the shortcut ALT + F4?',
+    'Do you know the shortcut ALT + F4? Or if you are rich, it may be CMD + W',
     'I dream of electric sheep.',
+    'Aaron earned an iron urn',
   ]);
 };
 
