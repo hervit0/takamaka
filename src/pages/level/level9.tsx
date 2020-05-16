@@ -2,10 +2,15 @@ import DateFnsUtils from '@date-io/date-fns';
 import { Box, Card, CardActionArea, CardContent, Container, Typography } from '@material-ui/core';
 import { MuiPickersUtilsProvider, TimePicker } from '@material-ui/pickers';
 import React from 'react';
+import Building from '../../components/building/building';
 import Level from '../../components/level/level';
 
 const Level9 = () => {
   const [selectedDate, handleDateChange]: [Date, any] = React.useState(new Date());
+
+  if (process.env.NODE_ENV === 'production') {
+    return (<Building/>);
+  }
 
   return (
     <Level name={'Time is running out [WIP]'}>
