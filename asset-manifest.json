@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/takamaka/static/css/main.758a6360.chunk.css",
-    "main.js": "/takamaka/static/js/main.98a6dacf.chunk.js",
-    "main.js.map": "/takamaka/static/js/main.98a6dacf.chunk.js.map",
+    "main.js": "/takamaka/static/js/main.e1e20d2e.chunk.js",
+    "main.js.map": "/takamaka/static/js/main.e1e20d2e.chunk.js.map",
     "runtime-main.js": "/takamaka/static/js/runtime-main.1923fc10.js",
     "runtime-main.js.map": "/takamaka/static/js/runtime-main.1923fc10.js.map",
     "static/js/2.9698de33.chunk.js": "/takamaka/static/js/2.9698de33.chunk.js",
     "static/js/2.9698de33.chunk.js.map": "/takamaka/static/js/2.9698de33.chunk.js.map",
     "index.html": "/takamaka/index.html",
-    "precache-manifest.2079b361bc4e9fbef999bbdb80d043dd.js": "/takamaka/precache-manifest.2079b361bc4e9fbef999bbdb80d043dd.js",
+    "precache-manifest.68160fea4143cb7e9e508f261dcc2ea9.js": "/takamaka/precache-manifest.68160fea4143cb7e9e508f261dcc2ea9.js",
     "service-worker.js": "/takamaka/service-worker.js",
     "static/css/main.758a6360.chunk.css.map": "/takamaka/static/css/main.758a6360.chunk.css.map",
     "static/js/2.9698de33.chunk.js.LICENSE.txt": "/takamaka/static/js/2.9698de33.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.1923fc10.js",
     "static/js/2.9698de33.chunk.js",
     "static/css/main.758a6360.chunk.css",
-    "static/js/main.98a6dacf.chunk.js"
+    "static/js/main.e1e20d2e.chunk.js"
   ]
 }
