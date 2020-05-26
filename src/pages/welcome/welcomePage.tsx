@@ -57,7 +57,7 @@ const WelcomePage = () => {
           size="large"
           startIcon={<PlayCircleOutlineIcon/>}
           href={Routes.root}
-          onClick={() => setCookies('level', encrypt('1'))}
+          onClick={() => setCookies('level', encrypt('1'), { expires: new Date('3055-12-17T03:24:00') })}
         >
           Start
         </Button>
